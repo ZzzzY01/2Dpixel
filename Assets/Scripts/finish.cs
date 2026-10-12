@@ -17,7 +17,7 @@ public class finish : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             audioSource.Play();
-            // Invoke("LoadNextScene", 1f); // 延迟1秒后加载下一场景
+            Invoke("LoadNextScene", 1f); // 延迟1秒后加载下一场景
         }
     }
 
