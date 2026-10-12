@@ -1,0 +1,6 @@
+{
+  "name": "PlayerDeathTests",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

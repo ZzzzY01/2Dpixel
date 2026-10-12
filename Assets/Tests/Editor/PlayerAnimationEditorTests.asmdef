@@ -1,0 +1,9 @@
+{
+  "name": "PlayerAnimationEditorTests",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}
