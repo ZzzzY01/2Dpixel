@@ -5447,7 +5447,7 @@ Transform:
   m_GameObject: {fileID: 1286992693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9105792, y: 3.206, z: -10}
+  m_LocalPosition: {x: -4.0642214, y: 2.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5539,41 +5539,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3330450262403148313, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
-      propertyPath: m_ScreenX
-      value: 0.289
-      objectReference: {fileID: 0}
-    - target: {fileID: 3330450262403148313, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
-      propertyPath: m_ScreenY
-      value: 0.407
-      objectReference: {fileID: 0}
-    - target: {fileID: 3330450262403148313, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
-      propertyPath: m_CenterOnActivate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4270149603554254062, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
       propertyPath: m_Name
       value: Virtual Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270149603554254062, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7650417466092279969, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 903602081}
-    - target: {fileID: 7650417466092279969, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8719018132287850990, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9105792
+      value: -4.0642214
       objectReference: {fileID: 0}
     - target: {fileID: 8719018132287850990, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.206
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 8719018132287850990, guid: bab57795d3c6edc429ec0f77324936b3, type: 3}
       propertyPath: m_LocalPosition.z

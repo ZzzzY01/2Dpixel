@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;//重新加载场景时需要引入这个
+using UnityEngine.Rendering.Universal;
 
 public class playerLife : MonoBehaviour
 {
@@ -33,9 +34,26 @@ public class playerLife : MonoBehaviour
         audioSource.PlayOneShot(deathSound); // 播放死亡音效
         GetComponent<PlayerMovement>().enabled = false;
         rb.bodyType = RigidbodyType2D.Static; // 停止玩家的移动
+        HidePlayerLights();
         Destroy(playerPs, 1f);
         anim.SetTrigger("death");
         //在这里可以添加其他死亡逻辑，比如重新加载场景等
+    }
+
+    private void HidePlayerLights()
+    {
+        // 关闭 Player 子物体中用作手电筒光束的 Sprite。
+        Transform lightVisual = transform.Find("Light");
+        if (lightVisual != null)
+        {
+            lightVisual.gameObject.SetActive(false);
+        }
+
+        // 关闭 Player 下的所有 URP 2D 灯光。
+        foreach (Light2D childLight in GetComponentsInChildren<Light2D>())
+        {
+            childLight.enabled = false;
+        }
     }
     // private void EnemyDeath()
     // {
@@ -57,6 +75,7 @@ public class playerLife : MonoBehaviour
         if (collision.tag == "DieLine")
         {
             audioSource.PlayOneShot(deathSound); // 播放死亡音效
+            HidePlayerLights();
             Invoke("RestartLevel", 0.2f); // 延迟0.2秒后重新加载场景
         }
     }
