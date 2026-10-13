@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()//物理
     {
         //圆形地面检测
-        bool groundedNow = Physics2D.OverlapCircle(groundCheck.position, 0.2f, ground) != null;
+        bool groundedNow = Physics2D.OverlapCircle(groundCheck.position, 0.22f, ground) != null;
 
         // 只在从空中落到地面的瞬间恢复跳跃次数，避免起跳后检测圆仍接触地面而重复重置
         if (groundedNow && !wasGrounded)
@@ -190,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
     private void Enemy()
     {
         // Collider2D enemyCollider = Physics2D.OverlapCircle(killPoint.position, 0.1f, LayerMask.GetMask("Enemy"));//(原点位置，半径，图层)
-        Collider2D enemyCollider = Physics2D.OverlapBox(killPoint.position, new Vector2(0.3f, 0.6f), 0f, LayerMask.GetMask("Enemy"));//(原点位置，大小，角度，图层)
+        Collider2D enemyCollider = Physics2D.OverlapBox(killPoint.position, new Vector2(0.4f, 0.6f), 0f, LayerMask.GetMask("Enemy"));//(原点位置，大小，角度，图层)
         if (enemyCollider == null)
         {
             return;
